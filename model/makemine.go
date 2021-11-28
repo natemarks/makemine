@@ -19,8 +19,8 @@ const DataDir = "/etc/makemine"
 
 // MyData contains all the fields we care about
 type MyData struct {
-	FullName  string `yaml:"fullName" json:"fullName"`
-	LocalUser string `yaml:"localUser" json:"localUser"`
+	FullName  string `yaml:"full_name" json:"fullName"`
+	LocalUser string `yaml:"local_user" json:"localUser"`
 	Email     string `yaml:"email" json:"email"`
 }
 

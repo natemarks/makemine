@@ -49,7 +49,7 @@ release: git-status build
 	mkdir -p release/$(VERSION)
 	@for o in $(GOOS); do \
 	  for a in $(GOARCH); do \
-        tar -C ./build/$(COMMIT)/$${o}/$${a} -czvf release/$(VERSION)/pgsummary_$(VERSION)_$${o}_$${a}.tar.gz . ; \
+        tar -C ./build/$(COMMIT)/$${o}/$${a} -czvf release/$(VERSION)/makemine_$(VERSION)_$${o}_$${a}.tar.gz . ; \
 	  done \
     done ; \
 
