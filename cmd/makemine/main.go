@@ -38,7 +38,10 @@ func main() {
 		zerolog.SetGlobalLevel(zerolog.DebugLevel)
 	}
 	logger.Debug().Msgf("Beginning to process data source arguments")
-
+	if len(flag.Args()) == 0 {
+		logger.Debug().Msg("no arguments provided. prompting for user data")
+		data = model.MyDataFromInput()
+	}
 	for _, v := range flag.Args() {
 		// try to get data from a file
 		data, err = model.MyDataFromFilePath(v)
