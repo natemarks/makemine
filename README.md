@@ -11,16 +11,29 @@ If you just built your computer and you're logged in with the default root user,
 ```shell
 sudo makemine
 Full Name (ex. Firstly Lastly):
-ttt yyy
+Firstly Lastly
 local computer user account(ex. flastly):
-tyyy
+flastly
 Email address (ex. flastly@somedomain.com):
-tyyy@google.com
-# NOTE: at the end, it silently writes your data to files in /etc/makemine
-# then it conveniently composes a useradd command to create the local, non-root/non-default user for regular use
-sudo useradd -m -d /home/tyyy -s /bin/bash -g sudo tyyy && passwd tyyy
+flastly@somedomain.com
+# the useradd/passwd line is printed by makemine for your convenience
+sudo useradd -m -d /home/flastly -s /bin/bash -g sudo flastly && passwd flastly
+# to see what it did:
+❯ cat /etc/makemine/makemine.yaml
+full_name: Firstly Lastly
+local_user: flastly
+email: flastly@somedomain.com
+❯ cat /etc/makemine/makemine.json
+{
+ "fullName": "Firstly Lastly",
+ "localUser": "flastly",
+ "email": "flastly@somedomain.com"
+}%
+❯ cat /etc/makemine/makemine.sh
+export FULLNAME="Firstly Lastly"
+export LOCALUSER="flastly"
+export EMAIL="flastly@somedomain.com"
 ```
-
 If you do this kind of thing often, you can store your data in a local json file or  public, url-accessible json file and makemine will iterate through your arguments to find it  and use it rather than prompting you. It tries every argument as a file path, then as a URL. If none of them work, it will prompt.  I've used github gists for this in testing, but anything should work.  The debug option below shows the general flow
 
 
