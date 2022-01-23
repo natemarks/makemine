@@ -17,7 +17,7 @@ flastly
 Email address (ex. flastly@somedomain.com):
 flastly@somedomain.com
 # the useradd/passwd line is printed by makemine for your convenience
-sudo useradd -m -d /home/flastly -s /bin/bash -g sudo flastly && passwd flastly
+sudo useradd -m -d /home/flastly -s /bin/bash -g sudo flastly && sudo passwd flastly
 # to see what it did:
 ❯ cat /etc/makemine/makemine.yaml
 full_name: Firstly Lastly
