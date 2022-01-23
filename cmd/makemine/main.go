@@ -83,6 +83,6 @@ func main() {
 	}
 
 	// finally, print the useradd command associated with the user data
-	addUserCmd := fmt.Sprintf("sudo useradd -m -d /home/%[1]s -s /bin/bash -g sudo %[1]s && passwd %[1]s", data.LocalUser)
+	addUserCmd := fmt.Sprintf("sudo useradd -m -d /home/%[1]s -s /bin/bash -g sudo %[1]s && sudo passwd %[1]s", data.LocalUser)
 	fmt.Println(addUserCmd)
 }
