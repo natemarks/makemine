@@ -8,7 +8,7 @@ NOTE: because it writes to etc, it has to be run with root privileges
 ## Installation
 
 ```shell
-bash -c 'curl "https://raw.githubusercontent.com/natemarks/pipeline-scripts/v0.0.35/scripts/install_makemine.sh" | bash -s --  -r 0.0.8'
+bash -c 'curl "https://raw.githubusercontent.com/natemarks/pipeline-scripts/v0.0.35/scripts/install_makemine.sh" | bash -s --  -r 0.0.9'
 
 ```
 
