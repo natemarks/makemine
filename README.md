@@ -5,6 +5,13 @@ Write user information into a global location for desktop linux computers. Deskt
 NOTE: because it writes to etc, it has to be run with root privileges
 
 
+## Installation
+
+```shell
+bash -c 'curl "https://raw.githubusercontent.com/natemarks/pipeline-scripts/v0.0.35/scripts/install_makemine.sh" | bash -s --  -r 0.0.7
+
+```
+
 ## Usage
 
 If you just built your computer and you're logged in with the default root user, run makemine to be prompted for your data
