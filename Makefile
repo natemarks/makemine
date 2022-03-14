@@ -5,7 +5,7 @@
 DEFAULT_BRANCH := main
 THIS_FILE := $(lastword $(MAKEFILE_LIST))
 PKG := github.com/natemarks/makemine
-VERSION := 0.0.9
+VERSION := 0.0.10
 COMMIT := $(shell git rev-parse HEAD)
 PKG_LIST := $(shell go list ${PKG}/... | grep -v /vendor/)
 GO_FILES := $(shell find . -name '*.go' | grep -v /vendor/)
