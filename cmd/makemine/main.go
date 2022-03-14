@@ -82,12 +82,8 @@ func main() {
 		logger.Fatal().Err(err)
 	}
 
-	// finally, print the useradd command associated with the user data
+	// finally, print the adduser command associated with the user data
 	addUnencryptedUserCmd := fmt.Sprintf("sudo adduser --shell /bin/bash --ingroup sudo %[1]s", data.LocalUser)
-	addEncryptedUserCmd := fmt.Sprintf("sudo adduser --encrypt-home --shell /bin/bash --ingroup sudo %[1]s", data.LocalUser)
-	fmt.Println("If the entire disk is already encrypted, just create the regular user with this command:")
 	fmt.Println(addUnencryptedUserCmd)
-	fmt.Println("If not, encrypt the regular user home directory with this command:")
-	fmt.Println(addEncryptedUserCmd)
 
 }
