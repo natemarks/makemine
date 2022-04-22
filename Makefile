@@ -74,7 +74,7 @@ fmt: ## run gofmt
 	@go fmt ${PKG_LIST}
 
 gocyclo: # run cyclomatic complexity check
-	go install golang.org/x/tools/cmd/gocyclo@latest
+	go install github.com/fzipp/gocyclo/cmd/gocyclo@latest
 	gocyclo -over 25 .
 
 static: goimports fmt vet lint gocyclo test
