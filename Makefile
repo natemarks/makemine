@@ -61,11 +61,11 @@ vet:
 	@go vet ${PKG_LIST}
 
 goimports: ## check imports
-	go get -u golang.org/x/tools/cmd/goimports
+	go install golang.org/x/tools/cmd/goimports@latest
 	goimports -w .
 
 lint:  ##  run golint
-	go get -u golang.org/x/lint/golint
+	go install golang.org/x/lint/golint@latest
 	@for file in ${GO_FILES} ;  do \
 		golint $$file ; \
 	done
@@ -74,8 +74,8 @@ fmt: ## run gofmt
 	@go fmt ${PKG_LIST}
 
 gocyclo: # run cyclomatic complexity check
-	go get -u github.com/fzipp/gocyclo/cmd/gocyclo
-	gocyclo -top 10 .
+	go install golang.org/x/tools/cmd/gocyclo@latest
+	gocyclo -over 25 .
 
 static: goimports fmt vet lint gocyclo test
 
